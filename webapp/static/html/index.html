@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <h1>Hello worlds</h1>
+    <hr>
+    <fieldset>
+        <h2>Chat </h2>
+        <p>Unique id assigned: <span id="idCont"></span></p>
+        <div>
+            <p id="f1ChatLog"></p>
+        </div>
+        <hr>
+        <form id="firstChatbox">
+            <fieldset>
+                <p> Message type</p>
+                <div style="display: flex; flex-direction: row;">
+                <input type="radio" id="serv" name="type" value="serv" checked="checked">
+                <label for="serv">Server</label><br>
+                <input type="radio" id="broad" name="type" value="broad">
+                <label for="broad">Broad</label><br>
+                <input type="radio" id="priv" name="type" value="priv">
+                <label for="priv">Private</label> 
+                </div>                 
+                <br>                
+                <label for="mes">Message: </label>                
+                <input type="text" name="mes" required>
+                <br>
+                    <div id="idConts" hidden>
+                        <label for="userIdm">UserId: </label>                
+                        <input type="text" name="userIdm" id="userIdmi" disabled style="width: 50%;">
+                    </div>
+                <hr>
+                <button type="submit">Send</button>
+            </fieldset>
+        </form>
+    </fieldset>
+
+    <button onclick="clicktest()" hidden>click</button>
+</body>
+<script type="module" src="/js/index.js"></script>
+<!-- <script type="text/javascript" src="/js/index.js"></script> -->
+
+</html>
