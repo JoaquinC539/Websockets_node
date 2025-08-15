@@ -8,9 +8,9 @@ const path=require('path');
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(express.static(__dirname+"/static"));
+app.use(express.static(__dirname+"/browser/static"));
 app.use("/",(req,res)=>{
-    res.sendFile(path.join(__dirname,"static","html","index.html"))
+    res.sendFile(path.join(__dirname,"browser","static","html","index.html"))
 })
 
 app.listen(PORT,()=>{

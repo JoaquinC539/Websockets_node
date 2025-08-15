@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <fieldset>
+        <h2>Chat </h2>
+        <p>Unique id assigned: <span id="idCont"></span></p>
+        <div>
+            <p id="f1ChatLog" style="max-height: 500px; overflow: auto;"></p>
+        </div>
+        <hr>
+        <form id="firstChatbox">
+            <fieldset>
+                <p> Message type</p>
+                <div style="display: flex; flex-direction: row;">
+                <input type="radio" id="serv" name="type" value="serv" checked="checked">
+                <label for="serv">Server</label><br>
+                <input type="radio" id="broad" name="type" value="broad">
+                <label for="broad">Broad</label><br>
+                <input type="radio" id="priv" name="type" value="priv">
+                <label for="priv">Private</label> 
+                </div>                 
+                <br>                
+                <label for="mes">Message: </label>                
+                <input type="text" name="mes" required>
+                <br>
+                    <div id="idConts" hidden>
+                        <label for="userIdm">UserId: </label>                
+                        <input type="text" name="userIdm" id="userIdmi" disabled style="width: 50%;">
+                    </div>
+                <hr>
+                <button type="submit">Send</button>
+            </fieldset>
+        </form>
+    </fieldset>
+
+    <button onclick="clicktest()" hidden>click</button>
+    <hr>
+    <section>
+        <fieldset>
+            <h3>Imagen de server</h3>
+            <img src="" id="imgServ" alt="imgServ" style="width: 300px; height: 400px;" hidden>
+            <br>
+            <button onclick="askImage()">Ask for image</button>
+        </fieldset>
+    </section>
+    
+    <hr>
+    <section>
+        <fieldset>
+            <h3>Video de server</h3>
+            <video id="videoServ" controls  hidden style="width: 500px; height: 500px;">  </video>
+            <hr>
+            <button onclick="askVideo()" id="askvid">Ask for video</button>
+        </fieldset>
+    </section>
+</body>
+<script type="module" src="/js/index.js"></script>
+<!-- <script type="text/javascript" src="/js/index.js"></script> -->
+
+</html>
